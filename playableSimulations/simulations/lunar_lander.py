@@ -5,27 +5,18 @@ import numpy as np
 
 class LunarLander:
     def __init__(self):
-        self.env = gym.make("LunarLander-v2", render_mode='rgb_array')
+        self.env = gym.make("LunarLander-v2", render_mode="human")
         self.observation = self.env.reset()
-        self.reward = 0
 
     def step(self, action):
-        self.observation, reward, self.done, _ = self.env.step(action)
-        self.reward += reward
-
-    def get_state(self):
-        # Convert the game frame to JPEG
-        frame = self.env.render()
-        _, buffer = cv2.imencode('.jpg', frame)
-        jpeg_image = base64.b64encode(buffer).decode()
-
-        return {
-            'image': jpeg_image,
-            'reward': self.reward
-        }
+        self.observation, reward, done, info = self.env.step(action)
+        return self.observation, reward, done, info
 
     def reset(self):
         self.observation = self.env.reset()
-        self.reward = 0
+
+    def render(self):
+        return self.env.render()
+
 
 lunar_lander = LunarLander()
