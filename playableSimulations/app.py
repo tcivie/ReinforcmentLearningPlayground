@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from simulations import lunar_lander
 
 app = Flask(__name__)
@@ -21,18 +21,30 @@ def game_frame():
     state = lunar_lander.lunar_lander.get_state()
 
     # Return it as a JSON object
-    return state
+    return jsonify(state)
 
 @app.route('/action', methods=['POST'])
 def action():
     # Get the action from the request body
     action = int(request.data)
 
-    # Apply the action to the Lunar Lander simulation
-    lunar_lander.lunar_lander.step(action)
+    # Apply the action to the Lunar Lander simulation and store results
+    results = []
+    done = False
+    while not done:
+        observation, reward, done, info = lunar_lander.lunar_lander.step(action)
+        results.append({
+            'observation': observation.tolist(),  # JSONify observation
+            'reward': reward,
+            'done': done
+        })
 
-    # Return an empty response
-    return '', 204
+    # If game is done, reset the environment
+    if done:
+        lunar_lander.lunar_lander.reset()
+
+    # Return results
+    return jsonify(results)
 
 if __name__ == '__main__':
     app.run()
