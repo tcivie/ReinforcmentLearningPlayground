@@ -1,4 +1,5 @@
-Flask==1.1.2
-gym==0.17.3
-opencv-python==4.4.0.46
+Flask==2.0.1
+Jinja2==3.0.1
+gym==0.18.3
+opencv-python==4.5.3.56
 numpy==1.21.0
