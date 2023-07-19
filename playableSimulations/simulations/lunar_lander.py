@@ -1,5 +1,5 @@
+from gym.envs import box2d
 import gym
-import cv2
 import base64
 import numpy as np
 
