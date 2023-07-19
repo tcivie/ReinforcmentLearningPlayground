@@ -5,7 +5,7 @@ import numpy as np
 
 class LunarLander:
     def __init__(self):
-        self.env = gym.make("LunarLander-v2", render_mode="human")
+        self.env = gym.make("LunarLander-v2")
         self.observation = self.env.reset()
 
     def step(self, action):
