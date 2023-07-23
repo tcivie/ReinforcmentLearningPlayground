@@ -36,6 +36,10 @@ I invite you to explore this playground and hope it serves as a useful resource 
 
 Find detailed explanations, insights, and more in the accompanying Deepnote articles:
 
-[Q-Learning on MountainCar-v0 Environment](https://deepnote.com/@sce-63d4/Reinforcment-Learning-Playground-5878bf73-13c4-4232-bd61-633eeedc1f05)
+[Q-Learning on MountainCar-v0 Environment](https://deepnote.com/workspace/sce-63d4-fc7602c2-ea3a-4733-a945-73a5fb5cde5d/project/Reinforcment-Learning-Playground-5878bf73-13c4-4232-bd61-633eeedc1f05/notebook/MountainCar-b873c066d23d42898e0265d6618dd70d)
+[Q-Learning on MountainCar-v0 Environment - Data Report 🗂️](https://api.wandb.ai/links/got-tree/ja3o7fb0)
+
+[Q-Learning on LunarLander-v2 Environment](https://deepnote.com/workspace/sce-63d4-fc7602c2-ea3a-4733-a945-73a5fb5cde5d/project/Reinforcment-Learning-Playground-5878bf73-13c4-4232-bd61-633eeedc1f05/notebook/LunarLander-bf000feb697b45f7a8b8a52651683634)
+[Q-Learning on LunarLander-v2 Environment - Data Report 🗂️](https://api.wandb.ai/links/got-tree/0tw2h06o)
 
 (Additional links will be added here as the articles are created)
